@@ -28,12 +28,25 @@ const IndexPage = () => {
     );
 };
 
-const query = graphql`
-    query IndexQuery {
-        allExample {
-            nodes {
-                header
+export const pageQuery = graphql`
+    query indexQuery($skip: Int!, $limit: Int!) {
+        site {
+            siteMetadata {
                 title
+            }
+        }
+        allEvent(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip,) {
+            nodes {
+                name
+                slug
+                address
+                date
+                description
+                gallery {
+                    localFile {
+                      publicURL
+                    }
+                }
             }
         }
     }

@@ -8,7 +8,8 @@ exports.createPages = async ({ graphql, actions }) => {
         query GetEvents {
             allEvent(sort: {order: DESC, fields: flotiqInternal___createdAt}) {
                 edges {
-                    nodes {
+                    node {
+                        id
                         name
                         slug
                         address
@@ -23,7 +24,6 @@ exports.createPages = async ({ graphql, actions }) => {
                 }
             }
         }
-    }
 `);
 
     if (result.errors) {

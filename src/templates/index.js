@@ -6,7 +6,7 @@ import Layout from '../layouts/layout';
 const IndexPage = ({ data }) => {
     const events = data.allEvent.nodes;
     return (
-        <Layout additionalClass={['bg-light-gray']}>
+        <Layout additionalClass={['bg-white']}>
             <Helmet>
                 <title>Flotiq Gatsby event starter</title>
             </Helmet>

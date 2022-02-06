@@ -22,9 +22,23 @@ export const pageQuery = graphql`
             id
             name
             slug
+            image {
+                extension
+                url
+                width
+                height
+                localFile {
+                    publicURL
+                    childImageSharp {
+                        gatsbyImageData(layout: FULL_WIDTH)
+                    }
+                }
+            }
             address
             date
+            price
             description
+            excerpt
             gallery {
                 localFile {
                   publicURL

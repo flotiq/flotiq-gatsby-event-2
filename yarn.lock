@@ -1799,6 +1799,11 @@
   dependencies:
     "mini-svg-data-uri" "^1.2.3"
 
+"@tailwindcss/line-clamp@^0.3.1":
+  "integrity" "sha512-pNr0T8LAc3TUx/gxCfQZRe9NB2dPEo/cedPHzUGIPxqDMhgjwNm6jYxww4W5l0zAsAddxr+XfZcqttGiFDgrGg=="
+  "resolved" "https://registry.npmjs.org/@tailwindcss/line-clamp/-/line-clamp-0.3.1.tgz"
+  "version" "0.3.1"
+
 "@tokenizer/token@^0.3.0":
   "integrity" "sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A=="
   "resolved" "https://registry.npmjs.org/@tokenizer/token/-/token-0.3.0.tgz"
@@ -5484,7 +5489,8 @@
   "version" "3.2.4"
 
 "flotiq-components-react@https://github.com/flotiq/flotiq-components-react.git":
-  "resolved" "git+ssh://git@github.com/flotiq/flotiq-components-react.git#e4f4040ff1351dbecfca8981139da1ab02e6ebd9"
+  "integrity" "sha512-n2r8bxYaubSKZPReYXgB4+lB4OnDI8Ti7jxH40/5Eu387wn8avF8zvjMZAeRMLjavxUz0UlrEpvIYVQf9b76kg=="
+  "resolved" "git+ssh://git@github.com/flotiq/flotiq-components-react.git"
   "version" "0.4.1"
 
 "follow-redirects@^1.0.0", "follow-redirects@^1.14.0":
@@ -10843,7 +10849,7 @@
     "string-width" "^4.2.3"
     "strip-ansi" "^6.0.1"
 
-"tailwindcss@^3.0.13", "tailwindcss@>=3.0.0 || >= 3.0.0-alpha.1":
+"tailwindcss@^3.0.13", "tailwindcss@>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1", "tailwindcss@>=3.0.0 || >= 3.0.0-alpha.1":
   "integrity" "sha512-raRPGFwQSGXn/3h0ttHND9jyPYfqk/ur2NXtlQuK25+ZnrCjlH1s1j4/oPswHGMoZzGNykUVycZ/LcROanUE0A=="
   "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.0.13.tgz"
   "version" "3.0.13"

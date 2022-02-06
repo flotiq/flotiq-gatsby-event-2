@@ -12,9 +12,15 @@ exports.createPages = async ({ graphql, actions }) => {
                         id
                         name
                         slug
+                        image {
+                            extension
+                            id
+                        }
                         address
                         date
+                        price
                         description
+                        excerpt
                         gallery {
                             localFile {
                               publicURL

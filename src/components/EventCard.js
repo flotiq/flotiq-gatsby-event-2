@@ -7,28 +7,55 @@ const CustomRecipeCard = ({ name, headerImage, date, excerpt, address, price, on
         onClick={onClick}
         bordered={false}
         rounded="none"
-        additionalClasses={['!flex mb-10 cursor-pointer']}
-        proportionsForVertical={{
-            body: '7/12',
-            img: '5/12',
-            breakpoint: 'lg',
-        }}
+        additionalClasses={['w-full flex flex-wrap mb-10 cursor-pointer']}
     >
-        <Card.Body
-            additionalClasses={[
-                'flex !p-0',
-            ]}
+
+        {/* Past event */}
+        <div className="flex !basis-1/6 md:!basis-1/12 flex-col justify-center items-center
+            basis-1/12 border-solid border border-gray font-light relative"
         >
-            <div className="flex flex-col justify-center items-center
-            basis-1/6 border-solid border border-gray font-light relative"
+            <p className="absolute top-0 left-0 w-full px-1 md:px-3
+            py-3 text-xs md:text-base text-center"
             >
-                <p className="absolute top-0 left-0 w-full py-3 text-center">Past event</p>
-                <p className="text-center">
-                    SAT
-                    <span className="block font-normal text-4xl">28</span>
-                </p>
-            </div>
-            <div className="flex flex-col justify-between px-10 py-5 basis-5/6 bg-light-gray">
+                Past event
+            </p>
+            <p className="text-center text-gray">
+                SAT
+                <span className="block font-normal text-2xl md:text-4xl">28</span>
+            </p>
+        </div>
+
+        {/* Featured Event */}
+        <div className="hidden flex !basis-1/6 lg:!basis-1/12 flex-col justify-center items-center
+            basis-1/12 border-solid border-2 border-secondary font-light relative"
+        >
+            <p className="absolute top-0 left-0 w-full px-1 md:px-3 py-3 text-xs md:text-base
+            text-center text-white bg-secondary"
+            >
+                Featured
+            </p>
+            <p className="text-center">
+                SAT
+                <span className="block font-normal text-2xl md:text-4xl">28</span>
+            </p>
+        </div>
+
+        {/* Future Event */}
+        <div className="hidden flex !basis-1/6 md:!basis-1/12 flex-col justify-center items-center
+            basis-1/12 border-solid border border-secondary font-light relative"
+        >
+            <p className="text-center">
+                SAT
+                <span className="block font-normal text-2xl md:text-4xl">28</span>
+            </p>
+        </div>
+
+        <div className="flex flex-wrap basis-5/6 lg:basis-11/12">
+            <Card.Body
+                additionalClasses={[
+                    'flex flex-col justify-between !p-10 !basis-full lg:!basis-1/2 bg-light-gray order-2 lg:order-1',
+                ]}
+            >
                 <p>
                     {date}
                 </p>
@@ -42,9 +69,15 @@ const CustomRecipeCard = ({ name, headerImage, date, excerpt, address, price, on
                     <p>{address}</p>
                     <p>{price}</p>
                 </div>
+            </Card.Body>
+            <div className="basis-full lg:basis-1/2 !order-1 lg:!order-2">
+                <Card.Img
+                    src={headerImage}
+                    alt={name}
+                    additionalClasses={['']}
+                />
             </div>
-        </Card.Body>
-        <Card.Img src={headerImage} alt={name} />
+        </div>
     </Card>
 );
 

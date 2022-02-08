@@ -5489,8 +5489,7 @@
   "version" "3.2.4"
 
 "flotiq-components-react@https://github.com/flotiq/flotiq-components-react.git":
-  "integrity" "sha512-n2r8bxYaubSKZPReYXgB4+lB4OnDI8Ti7jxH40/5Eu387wn8avF8zvjMZAeRMLjavxUz0UlrEpvIYVQf9b76kg=="
-  "resolved" "git+ssh://git@github.com/flotiq/flotiq-components-react.git"
+  "resolved" "git+ssh://git@github.com/flotiq/flotiq-components-react.git#e4f4040ff1351dbecfca8981139da1ab02e6ebd9"
   "version" "0.4.1"
 
 "follow-redirects@^1.0.0", "follow-redirects@^1.14.0":

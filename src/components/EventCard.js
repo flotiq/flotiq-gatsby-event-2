@@ -20,7 +20,7 @@ const CustomRecipeCard = ({ name, headerImage, date, excerpt, address, price, on
             ]}
         >
             <div className="flex flex-col justify-center items-center
-            basis-1/6 border-solid border border-gray font-light relative"
+            basis-1/6 border-solid border !border-gray font-light relative"
             >
                 <p className="absolute top-0 left-0 w-full py-3 text-center">Past event</p>
                 <p className="text-center">

@@ -5,9 +5,10 @@ import NextEvents from '../sections/NextEvents';
 
 const EventTemplate = ({ data }) => {
     const { event } = data;
+    const events = data.allEvent.nodes;
     return (
         <Layout additionalClass={['bg-white']}>
-            <NextEvents event={event} headerText="Next Events" />
+            <NextEvents events={events} headerText="Next Events" />
         </Layout>
     );
 };
@@ -53,7 +54,6 @@ export const pageQuery = graphql`
                 slug
                 address
                 date
-                description
                 excerpt
                 price
                 image {
@@ -66,11 +66,6 @@ export const pageQuery = graphql`
                         childImageSharp {
                             gatsbyImageData(layout: FULL_WIDTH)
                         }
-                    }
-                }
-                gallery {
-                    localFile {
-                      publicURL
                     }
                 }
             }

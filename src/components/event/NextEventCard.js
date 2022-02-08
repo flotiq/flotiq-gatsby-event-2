@@ -7,48 +7,34 @@ const NextEventCard = ({ name, headerImage, date, excerpt, address, price, onCli
         onClick={onClick}
         bordered={false}
         rounded="none"
-        additionalClasses={['w-full flex flex-wrap mb-10 cursor-pointer']}
+        additionalClasses={['basis-full lg:basis-1/3 flex flex-wrap mb-5 lg:mb-10 cursor-pointer)']}
     >
-        <div className="flex !basis-1/6 lg:!basis-1/12 flex-col justify-center items-center
-            basis-1/12 border-solid border-2 border-secondary font-light relative"
+        <div className="basis-2/12 flex flex-col justify-center items-center
+        border-solid border border-secondary font-light relative"
         >
-            <p className="absolute top-0 left-0 w-full px-1 md:px-3 py-3 text-xs md:text-base
-            text-center text-white bg-secondary"
-            >
-                Featured
-            </p>
             <p className="text-center">
                 SAT
-                <span className="block font-normal text-2xl md:text-4xl">28</span>
+                <span className="block text-2xl md:text-4xl">28</span>
             </p>
         </div>
-        <div className="flex flex-wrap basis-5/6 lg:basis-11/12">
-            <Card.Body
-                additionalClasses={[
-                    'flex flex-col justify-between !p-5 md:!pd-10 !basis-full '
-                    + 'lg:!basis-1/2 bg-light-gray order-2 lg:order-1',
-                ]}
-            >
-                <p>
-                    {date}
-                </p>
-                <Card.Title additionalClasses={['font-normal']} />
-                <Card.Text additionalClasses={['line-clamp-4 !my-0']}>
-                    {excerpt}
-                </Card.Text>
-                <div className="mt-10 flex flex-wrap items-center justify-self-end justify-between">
-                    <p>{address}</p>
-                    <p>{price}</p>
-                </div>
-            </Card.Body>
-            <div className="basis-full lg:basis-1/2 !order-1 lg:!order-2">
-                <Card.Img
-                    src={headerImage}
-                    alt={name}
-                    additionalClasses={['']}
-                />
+        <Card.Body
+            additionalClasses={[
+                '!basis-7/12 flex flex-col justify-between !p-5 md:!pd-10 bg-light-gray',
+            ]}
+        >
+            <p>
+                {date}
+            </p>
+            <Card.Title additionalClasses={['font-normal']} />
+            <Card.Text additionalClasses={['line-clamp-4 lg:line-clamp-3 !my-0']}>
+                {excerpt}
+            </Card.Text>
+            <div className="mt-10 flex flex-wrap items-center justify-self-end justify-between">
+                <p>{address}</p>
+                <p>{price}</p>
             </div>
-        </div>
+        </Card.Body>
+        <div className="basis-3/12 bg-cover bg-center" style={{ backgroundImage: `url('${headerImage}')` }} />
     </Card>
 );
 

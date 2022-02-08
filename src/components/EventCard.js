@@ -53,7 +53,8 @@ const CustomRecipeCard = ({ name, headerImage, date, excerpt, address, price, on
         <div className="flex flex-wrap basis-5/6 lg:basis-11/12">
             <Card.Body
                 additionalClasses={[
-                    'flex flex-col justify-between !p-10 !basis-full lg:!basis-1/2 bg-light-gray order-2 lg:order-1',
+                    'flex flex-col justify-between !p-5 md:!pd-10 !basis-full '
+                    + 'lg:!basis-1/2 bg-light-gray order-2 lg:order-1',
                 ]}
             >
                 <p>

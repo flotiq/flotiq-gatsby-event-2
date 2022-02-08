@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby event starter</title>
             </Helmet>
-            <Eventcards events={events} additnalClasses={['py-10']} />
+            <Eventcards events={events} headerText="Upcoming events" additnalClasses={['py-10']} />
         </Layout>
     );
 };

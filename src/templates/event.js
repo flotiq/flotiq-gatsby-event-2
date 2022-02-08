@@ -1,12 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import NextEvents from '../sections/NextEvents';
 
 const EventTemplate = ({ data }) => {
     const { event } = data;
     return (
-        <Layout additionalClass={['bg-light-gray']}>
-            <div>Event</div>
+        <Layout additionalClass={['bg-white']}>
+            <NextEvents events={events} headerText="Next Events" />
         </Layout>
     );
 };

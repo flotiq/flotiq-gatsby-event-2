@@ -7,7 +7,7 @@ const EventTemplate = ({ data }) => {
     const { event } = data;
     return (
         <Layout additionalClass={['bg-white']}>
-            <NextEvents events={events} headerText="Next Events" />
+            <NextEvents event={event} headerText="Next Events" />
         </Layout>
     );
 };
@@ -26,9 +26,52 @@ export const pageQuery = graphql`
             address
             date
             description
+            excerpt
+            price
+            image {
+                extension
+                url
+                width
+                height
+                localFile {
+                    publicURL
+                    childImageSharp {
+                        gatsbyImageData(layout: FULL_WIDTH)
+                    }
+                }
+            }
             gallery {
                 localFile {
                   publicURL
+                }
+            }
+        }
+        allEvent(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 3, filter: {slug: {ne: $slug}}) {
+            nodes {
+                id
+                name
+                slug
+                address
+                date
+                description
+                excerpt
+                price
+                image {
+                    extension
+                    url
+                    width
+                    height
+                    localFile {
+                        publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
+                    }
+                }
+                gallery {
+                    localFile {
+                      publicURL
+                    }
                 }
             }
         }

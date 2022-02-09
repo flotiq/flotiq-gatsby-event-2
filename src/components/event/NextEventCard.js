@@ -26,13 +26,13 @@ const NextEventCard = ({ name, headerImage, date, excerpt, address, price, onCli
             <p>
                 {date}
             </p>
-            <Card.Title additionalClasses={['font-normal']}>
+            <Card.Title additionalClasses={['font-normal !text-xl my-3']}>
                 {name}
             </Card.Title>
             <Card.Text additionalClasses={['line-clamp-4 lg:line-clamp-3 !my-0']}>
                 {excerpt}
             </Card.Text>
-            <div className="mt-10 flex flex-wrap items-center justify-self-end justify-between">
+            <div className="mt-5 flex flex-wrap items-center justify-self-end justify-between">
                 <p>{address}</p>
                 <p>{price}</p>
             </div>

@@ -3,12 +3,12 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import NextEvents from '../sections/NextEvents';
 
-const EventTemplate = ({ data }) => {
+const EventTemplate = ({ data, pageContext }) => {
     const { event } = data;
     const events = data.allEvent.nodes;
     return (
         <Layout additionalClass={['bg-white']}>
-            <NextEvents events={events} headerText="Next Events" />
+            <NextEvents events={events} headerText="Next Events" pageContext={pageContext} />
         </Layout>
     );
 };

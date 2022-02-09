@@ -15,6 +15,7 @@ const NextEventCard = ({ name, headerImage, date, excerpt, address, price, onCli
             <p className="text-center">
                 SAT
                 <span className="block text-2xl md:text-4xl">28</span>
+                12pm
             </p>
         </div>
         <Card.Body
@@ -25,7 +26,9 @@ const NextEventCard = ({ name, headerImage, date, excerpt, address, price, onCli
             <p>
                 {date}
             </p>
-            <Card.Title additionalClasses={['font-normal']} />
+            <Card.Title additionalClasses={['font-normal']}>
+                {name}
+            </Card.Title>
             <Card.Text additionalClasses={['line-clamp-4 lg:line-clamp-3 !my-0']}>
                 {excerpt}
             </Card.Text>

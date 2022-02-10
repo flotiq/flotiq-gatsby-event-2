@@ -11,7 +11,11 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby event starter</title>
             </Helmet>
-            <Eventcards events={events} headerText="Upcoming events" additnalClasses={['py-10']} />
+            <Eventcards
+                events={events}
+                headerText="Upcoming events"
+                additnalClasses={['py-10']}
+            />
         </Layout>
     );
 };
@@ -23,7 +27,7 @@ export const pageQuery = graphql`
                 title
             }
         }
-        allEvent(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip,) {
+        allEvent(sort: {fields: date, order: ASC}, limit: $limit, skip: $skip,) {
             nodes {
                 id
                 name

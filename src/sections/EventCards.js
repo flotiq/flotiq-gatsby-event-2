@@ -4,9 +4,12 @@ import { Header } from 'flotiq-components-react';
 import EventCard from '../components/EventCard';
 
 const RecipeCards = ({ events, headerText }) => {
-    let featuredIsFounded = false;
+    let featuredIsFound = false;
     const isFeatured = (event) => {
-        if (new Date(event.date) >= new Date() && !featuredIsFounded) { featuredIsFounded = true; return true; }
+        if (new Date(event.date) >= new Date() && !featuredIsFound) {
+            featuredIsFound = true;
+            return true;
+        }
         return false;
     };
     return (
@@ -20,7 +23,7 @@ const RecipeCards = ({ events, headerText }) => {
             <div className="flex flex-wrap">
                 {events.map((event) => (
                     <EventCard
-                        featured={() => isFeatured(event)}
+                        featured={isFeatured(event)}
                         name={event.name}
                         headerImage={event.image[0] && event.image[0].localFile.publicURL}
                         date={event.date}
@@ -28,6 +31,7 @@ const RecipeCards = ({ events, headerText }) => {
                         address={event.address}
                         price={event.price}
                         onClick={() => { navigate(`/${event.slug}`); }}
+                        key={event.id}
                     />
                 ))}
             </div>

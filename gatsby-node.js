@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const singleEvent = path.resolve('./src/templates/event.js');
     const result = await graphql(`
         query GetEvents {
-            allEvent(sort: {order: DESC, fields: flotiqInternal___createdAt}) {
+            allEvent(sort: {order: ASC, fields: date}) {
                 edges {
                     node {
                         id

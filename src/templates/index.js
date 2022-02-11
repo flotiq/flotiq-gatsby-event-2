@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
-import Eventcards from '../sections/EventCards';
+import EventCards from '../sections/EventCards';
 
 const IndexPage = ({ data }) => {
     const events = data.allEvent.nodes;
@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby event starter</title>
             </Helmet>
-            <Eventcards
+            <EventCards
                 events={events}
                 headerText="Upcoming events"
                 additnalClasses={['py-10']}

@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
 import EventDescriptionCard from '../components/event/EventDescriptionCard';
+import Contact from '../sections/Contact';
 
 const EventTemplate = ({ data }) => {
     const { event } = data;
@@ -15,6 +16,15 @@ const EventTemplate = ({ data }) => {
                     description={event.description}
                     address={event.address}
                     price={event.price}
+                />
+            </div>
+            <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                <Contact
+                    headerText="Do you have more questions?"
+                    nameInputLabel="Name"
+                    emailInputLabel="Email"
+                    messageInputLabel="Message"
+                    buttonLabel="Send"
                 />
             </div>
         </Layout>

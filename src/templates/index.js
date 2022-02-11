@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../layouts/layout';
+import EventCards from '../sections/EventCards';
 
 const IndexPage = ({ data }) => {
     const events = data.allEvent.nodes;
@@ -10,9 +11,11 @@ const IndexPage = ({ data }) => {
             <Helmet>
                 <title>Flotiq Gatsby event starter</title>
             </Helmet>
-            {events.map((event) => (
-                <a href={`/${event.slug}`}><p key={event.id}>{event.name}</p></a>
-            ))}
+            <EventCards
+                events={events}
+                headerText="Upcoming events"
+                additnalClasses={['py-10']}
+            />
         </Layout>
     );
 };
@@ -24,14 +27,28 @@ export const pageQuery = graphql`
                 title
             }
         }
-        allEvent(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: $limit, skip: $skip,) {
+        allEvent(sort: {fields: date, order: ASC}, limit: $limit, skip: $skip,) {
             nodes {
                 id
                 name
                 slug
+                image {
+                    extension
+                    url
+                    width
+                    height
+                    localFile {
+                        publicURL
+                        childImageSharp {
+                            gatsbyImageData(layout: FULL_WIDTH)
+                        }
+                    }
+                }
                 address
                 date
+                price
                 description
+                excerpt
                 gallery {
                     localFile {
                       publicURL

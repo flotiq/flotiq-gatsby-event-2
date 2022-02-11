@@ -17,6 +17,8 @@ const EventTemplate = ({ data }) => {
                     address={event.address}
                     price={event.price}
                 />
+            </div>
+            <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <Contact
                     headerText="Do you have more questions?"
                     nameInputLabel="Name"

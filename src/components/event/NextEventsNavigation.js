@@ -8,7 +8,7 @@ const NextEventsNavigation = ({ additionalClass, prevText, nextText, pageContext
                 <a
                     href={`/${pageContext.previous.slug}`}
                     className="border-t-2 border-transparent pt-4 pr-1
-                                inline-flex items-center text-sm md:text-lg font-medium hover:text-secondary"
+                                inline-flex items-center text-sm md:text-lg font-medium hover:text-primary"
                 >
                     <ArrowNarrowLeftIcon className="mr-2 h-5 md:h-7 w-5 md:w-7" aria-hidden="true" />
                     {prevText}
@@ -20,7 +20,7 @@ const NextEventsNavigation = ({ additionalClass, prevText, nextText, pageContext
                 <a
                     href={`/${pageContext.next.slug}`}
                     className="border-t-2 border-transparent pt-4 pl-1
-                            inline-flex items-center text-sm md:text-lg font-medium hover:text-secondary"
+                            inline-flex items-center text-sm md:text-lg font-medium hover:text-primary"
                 >
                     {nextText}
                     <ArrowNarrowRightIcon className="ml-2 h-5 md:h-7 w-5 md:w-7" aria-hidden="true" />

@@ -6,14 +6,13 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: '#000000',
-                secondary: '#0083FC',
+                primary: '#0083FC',
                 gray: '#e7e7e7',
                 'light-gray': '#F9F9F9',
             },
-        },
-        fontFamily: {
-            lato: ['Lato', 'sans-serif'],
+            fontFamily: {
+                lato: ['Lato', 'sans-serif'],
+            },
         },
     },
     presets: [

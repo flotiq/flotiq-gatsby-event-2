@@ -12,10 +12,12 @@ const EventDescriptionCard = ({ name, headerImage, date, description, address, p
             basis-1/12 font-light relative bg-light-gray"
         >
             <p className="w-full px-1 md:px-3 py-7 text-xs md:text-base
-            text-center text-white bg-secondary"
+            text-center text-white bg-primary"
             >
-                SAT
-                <span className="block font-normal text-2xl md:text-4xl">28</span>
+                {new Date(date).toLocaleString('en-us', { weekday: 'short' }).toUpperCase()}
+                <span className="block font-normal text-2xl md:text-4xl">
+                    {new Date(date).getDate().toString().padStart(2, '0')}
+                </span>
             </p>
         </div>
         <div className="flex flex-wrap basis-5/6 lg:basis-11/12">
@@ -26,7 +28,7 @@ const EventDescriptionCard = ({ name, headerImage, date, description, address, p
                 ]}
             >
                 <p>
-                    {date}
+                    {date.replace('T', ' ')}
                 </p>
                 <Card.Title additionalClasses={['font-normal mt-5 mb-8']}>
                     {name}

@@ -14,7 +14,15 @@ exports.createPages = async ({ graphql, actions }) => {
                         slug
                         image {
                             extension
-                            id
+                            url
+                            width
+                            height
+                            localFile {
+                                publicURL
+                                childImageSharp {
+                                    gatsbyImageData(layout: FULL_WIDTH)
+                                }
+                            }
                         }
                         address
                         date
@@ -35,10 +43,13 @@ exports.createPages = async ({ graphql, actions }) => {
     if (result.errors) {
         throw result.errors;
     }
-    const events = result.data.allEvent.edges;
+    let events = result.data.allEvent.edges;
+    const today = new Date();
+    const filterDate = new Date(`${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-01`);
+    events = events.filter((event) => new Date(event.node.date) > filterDate);
 
     // Create paginated index
-    const eventsPerPage = 7;
+    const eventsPerPage = 5;
     const numPages = Math.ceil(events.length / eventsPerPage);
 
     Array.from({ length: numPages }).forEach((item, i) => {
@@ -50,14 +61,15 @@ exports.createPages = async ({ graphql, actions }) => {
                 skip: i * eventsPerPage,
                 numPages,
                 currentPage: i + 1,
+                events: events.slice(i * eventsPerPage, i * eventsPerPage + eventsPerPage),
             },
         });
     });
 
     // Create events pages.
     events.forEach((event, index) => {
-        const previous = index === events.length - 1 ? null : events[index + 1].node;
-        const next = index === 0 ? null : events[index - 1].node;
+        const next = index === events.length - 1 ? null : events[index + 1].node;
+        const previous = index === 0 ? null : events[index - 1].node;
 
         createPage({
             path: event.node.slug,
@@ -66,6 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug: event.node.slug,
                 previous,
                 next,
+                nextEvents: events.slice(index + 1, index + 4),
             },
         });
     });

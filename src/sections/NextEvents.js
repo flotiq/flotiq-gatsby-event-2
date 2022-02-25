@@ -4,7 +4,7 @@ import NextEventCard from '../components/event/NextEventCard';
 import NextEventsNavigation from '../components/event/NextEventsNavigation';
 
 const NextEvents = ({ events, headerText, pageContext }) => (
-    <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-0">
         {events.length > 0 && (
             <>
                 <Header text={headerText} additionalClasses={['!font-light mb-5']} />
@@ -18,6 +18,7 @@ const NextEvents = ({ events, headerText, pageContext }) => (
                             excerpt={event.node.excerpt}
                             address={event.node.address}
                             price={event.node.price}
+                            key={event.node.id}
                         />
                     ))}
                 </div>

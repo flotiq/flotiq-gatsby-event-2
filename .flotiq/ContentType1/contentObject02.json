@@ -1,6 +1,6 @@
 {
   "id": "event-2",
-  "date": "{{date}}T9:00",
+  "date": "{{date}}T09:00",
   "name": "NgVikings Meetup",
   "slug": "ngvikings-meetup",
   "image": [

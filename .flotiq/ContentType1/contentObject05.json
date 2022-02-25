@@ -1,6 +1,6 @@
 {
   "id": "event-5",
-  "date": "{{date:+60d}}T8:00",
+  "date": "{{date:+60d}}T08:00",
   "name": "React Conf '22",
   "slug": "react-conf-22",
   "image": [

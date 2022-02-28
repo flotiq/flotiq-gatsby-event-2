@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import Logo from '../assets/event-logo.svg';
@@ -9,13 +10,13 @@ const Header = () => (
             <>
                 <div className="max-w-7xl flex justify-center mx-auto py-4">
                     <div className="flex-shrink-0 flex grow md:grow-0 items-center justify-center">
-                        <a href="/">
+                        <Link to="/">
                             <img
                                 className="block h-8 md:h-12 w-auto"
                                 src={Logo}
                                 alt="Flotiq"
                             />
-                        </a>
+                        </Link>
                     </div>
                     <div className="-ml-2 mr-2 flex items-center md:hidden">
                         <Disclosure.Button

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
+import Pagination from 'flotiq-components-react/dist/components/Pagination/Pagination';
 import Layout from '../layouts/layout';
 import EventCards from '../sections/EventCards';
 
-const IndexPage = ({ data }) => {
-    const events = data.allEvent.nodes;
+const IndexPage = ({ pageContext }) => {
+    const { events } = pageContext;
     return (
         <Layout additionalClass={['bg-white']}>
             <Helmet>
@@ -16,44 +17,16 @@ const IndexPage = ({ data }) => {
                 headerText="Upcoming events"
                 additnalClasses={['py-10']}
             />
+            <Pagination numOfPages={pageContext.numPages} page={pageContext.currentPage} rounded="none" />
         </Layout>
     );
 };
 
 export const pageQuery = graphql`
-    query indexQuery($skip: Int!, $limit: Int!) {
+    query indexQuery {
         site {
             siteMetadata {
                 title
-            }
-        }
-        allEvent(sort: {fields: date, order: ASC}, limit: $limit, skip: $skip,) {
-            nodes {
-                id
-                name
-                slug
-                image {
-                    extension
-                    url
-                    width
-                    height
-                    localFile {
-                        publicURL
-                        childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH)
-                        }
-                    }
-                }
-                address
-                date
-                price
-                description
-                excerpt
-                gallery {
-                    localFile {
-                      publicURL
-                    }
-                }
             }
         }
     }

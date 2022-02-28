@@ -23,7 +23,7 @@ const Contact = ({ headerText, nameInputLabel, emailInputLabel, messageInputLabe
                     name="full-name"
                     id="full-name"
                     autoComplete="name"
-                    className="block w-full py-3 px-4 placeholder-primary/25
+                    className="block w-full py-3 px-4 placeholder-black/25
                     placeholder:font-light border-0 border-b border-gray"
                     placeholder="Name"
                 />
@@ -37,7 +37,7 @@ const Contact = ({ headerText, nameInputLabel, emailInputLabel, messageInputLabe
                     name="email"
                     id="email"
                     autoComplete="email"
-                    className="block w-full py-3 px-4 placeholder-primary/25
+                    className="block w-full py-3 px-4 placeholder-black/25
                     placeholder:font-light border-0 border-b border-gray"
                     placeholder="Email"
                 />
@@ -50,7 +50,7 @@ const Contact = ({ headerText, nameInputLabel, emailInputLabel, messageInputLabe
                     id="message"
                     name="message"
                     rows={2}
-                    className="block w-full py-3 px-4 placeholder-primary/25
+                    className="block w-full py-3 px-4 placeholder-black/25
                      placeholder:font-light border-0 border-b border-gray"
                     placeholder="Message"
                 />
@@ -59,7 +59,7 @@ const Contact = ({ headerText, nameInputLabel, emailInputLabel, messageInputLabe
                 <button
                     type="submit"
                     className="inline-flex justify-center py-2 px-10 text-base
-                         font-light text-white bg-secondary"
+                         font-light text-white bg-primary"
                 >
                     {buttonLabel}
                 </button>

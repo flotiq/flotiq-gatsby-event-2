@@ -7,10 +7,9 @@ import NextEvents from '../sections/NextEvents';
 
 const EventTemplate = ({ data, pageContext }) => {
     const { event } = data;
-    const events = data.allEvent.nodes;
     return (
         <Layout additionalClass={['bg-white']}>
-            <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-0">
                 <EventDescriptionCard
                     name={event.name}
                     headerImage={event.image[0] && event.image[0].localFile.publicURL}
@@ -20,8 +19,8 @@ const EventTemplate = ({ data, pageContext }) => {
                     price={event.price}
                 />
             </div>
-            <NextEvents events={events} headerText="Next Events" pageContext={pageContext} />
-            <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <NextEvents events={pageContext.nextEvents} headerText="Next Events" pageContext={pageContext} />
+            <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 mt-10">
                 <Contact
                     headerText="Do you have more questions?"
                     nameInputLabel="Name"
@@ -78,29 +77,6 @@ export const pageQuery = graphql`
             gallery {
                 localFile {
                   publicURL
-                }
-            }
-        }
-        allEvent(sort: {fields: flotiqInternal___createdAt, order: DESC}, limit: 3, filter: {slug: {ne: $slug}}) {
-            nodes {
-                id
-                name
-                slug
-                address
-                date
-                excerpt
-                price
-                image {
-                    extension
-                    url
-                    width
-                    height
-                    localFile {
-                        publicURL
-                        childImageSharp {
-                            gatsbyImageData(layout: FULL_WIDTH)
-                        }
-                    }
                 }
             }
         }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import Layout from '../layouts/layout';
 import EventDescriptionCard from '../components/event/EventDescriptionCard';
 import Contact from '../sections/Contact';
@@ -9,6 +10,13 @@ const EventTemplate = ({ data, pageContext }) => {
     const { event } = data;
     return (
         <Layout additionalClass={['bg-white']}>
+            <Helmet>
+                <title>{event.name}</title>
+                <meta
+                    name="description"
+                    content={event.description}
+                />
+            </Helmet>
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-0">
                 <EventDescriptionCard
                     name={event.name}

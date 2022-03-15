@@ -5,12 +5,16 @@ import Pagination from 'flotiq-components-react/dist/components/Pagination/Pagin
 import Layout from '../layouts/layout';
 import EventCards from '../sections/EventCards';
 
-const IndexPage = ({ pageContext }) => {
+const IndexPage = ({ data, pageContext }) => {
     const { events } = pageContext;
     return (
         <Layout additionalClass={['bg-white']}>
             <Helmet>
-                <title>Flotiq Gatsby event starter</title>
+                <title>{data.site.siteMetadata.title}</title>
+                <meta
+                    name="description"
+                    content={data.site.siteMetadata.description}
+                />
             </Helmet>
             <EventCards
                 events={events}
@@ -27,6 +31,7 @@ export const pageQuery = graphql`
         site {
             siteMetadata {
                 title
+                description
             }
         }
     }

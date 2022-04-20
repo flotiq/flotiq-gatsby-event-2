@@ -52,7 +52,7 @@ const CustomEventCard = ({ name, headerImage, date, excerpt, address, price, slu
     return (
         <Link to={`/${slug}`}>
             <Card
-                vertical
+                horizontal
                 bordered={false}
                 rounded="none"
                 additionalClasses={['w-full flex flex-wrap mb-10 cursor-pointer']}

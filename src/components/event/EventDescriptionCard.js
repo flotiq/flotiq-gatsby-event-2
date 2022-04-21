@@ -3,7 +3,7 @@ import { Card, Paragraph } from 'flotiq-components-react';
 
 const EventDescriptionCard = ({ name, headerImage, date, description, address, price }) => (
     <Card
-        vertical
+        horizontal
         bordered={false}
         rounded="none"
         additionalClasses={['w-full flex flex-wrap mb-10 my-10']}
@@ -33,7 +33,7 @@ const EventDescriptionCard = ({ name, headerImage, date, description, address, p
                 <Card.Title additionalClasses={['font-normal mt-5 mb-8']}>
                     {name}
                 </Card.Title>
-                <Paragraph text={description} />
+                <Paragraph>{description}</Paragraph>
                 <div className="mt-10 flex flex-wrap items-center justify-self-end justify-between">
                     <p>{address}</p>
                     <p>{price}</p>

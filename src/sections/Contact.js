@@ -5,10 +5,11 @@ const Contact = ({ headerText, nameInputLabel, emailInputLabel, messageInputLabe
     <div className="flex flex-wrap mx-auto w-5/6 md:w-4/6">
         <Header
             level={2}
-            text={headerText}
             additionalClasses={['text-3xl lg:text-5xl leading-tight basis-full '
             + 'md:basis-1/2 lg:basis-5/12 px-0 md:px-5']}
-        />
+        >
+            {headerText}
+        </Header>
         <form
             action="#"
             method="POST"

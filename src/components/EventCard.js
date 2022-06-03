@@ -47,6 +47,7 @@ const FutureEventLabel = ({ date }) => (
 
 const CustomEventCard = ({ name, headerImage, date, excerpt, address, price, slug, featured }) => {
     let EventLabel = FutureEventLabel;
+    const imgSize = { width: 590, height: 330 };
     if (new Date(date) < new Date()) { EventLabel = PastEventLabel; }
     if (featured) { EventLabel = FeaturedEventLabel; }
     return (
@@ -85,6 +86,7 @@ const CustomEventCard = ({ name, headerImage, date, excerpt, address, price, slu
                             src={headerImage}
                             alt={name}
                             additionalClasses={['']}
+                            imageAdditionalProps={imgSize}
                         />
                     </div>
                 </div>

@@ -15,7 +15,7 @@ const NextEvents = ({ events, headerText, pageContext }) => (
                         <NextEventCard
                             slug={event.node.slug}
                             name={event.node.name}
-                            headerImage={event.node.image[0] && event.node.image[0].localFile.publicURL}
+                            headerImage={event.node.image[0] && event.node.image[0].localFile}
                             date={event.node.date}
                             excerpt={event.node.excerpt}
                             address={event.node.address}

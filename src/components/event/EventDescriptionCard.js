@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Paragraph } from 'flotiq-components-react';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const EventDescriptionCard = ({ name, headerImage, date, description, address, price }) => (
     <Card
@@ -45,10 +46,10 @@ const EventDescriptionCard = ({ name, headerImage, date, description, address, p
             />
         </div>
         <div className="basis-full">
-            <Card.Img
-                src={headerImage}
+            <GatsbyImage
+                image={getImage(headerImage)}
                 alt={name}
-                additionalClasses={['block lg:hidden !w-full']}
+                imgClassName={['block lg:hidden !w-full']}
             />
         </div>
     </Card>

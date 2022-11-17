@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from 'flotiq-components-react';
 import { Link } from 'gatsby';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const PastEventLabel = ({ date }) => (
     <div className="flex !basis-1/6 md:!basis-1/12 flex-col justify-center items-center
@@ -64,7 +65,7 @@ const CustomEventCard = ({ name, headerImage, date, excerpt, address, price, slu
                     <Card.Body
                         additionalClasses={[
                             'flex flex-col justify-between !p-5 md:!pd-10 !basis-full '
-                        + 'lg:!basis-1/2 bg-light-gray order-2 lg:order-1',
+                            + 'lg:!basis-1/2 bg-light-gray order-2 lg:order-1',
                         ]}
                     >
                         <p>
@@ -82,10 +83,10 @@ const CustomEventCard = ({ name, headerImage, date, excerpt, address, price, slu
                         </div>
                     </Card.Body>
                     <div className="basis-full lg:basis-1/2 !order-1 lg:!order-2">
-                        <Card.Img
-                            src={headerImage}
+                        <GatsbyImage
+                            image={getImage(headerImage)}
                             alt={name}
-                            additionalClasses={['']}
+                            imgClassName={['']}
                             imageAdditionalProps={imgSize}
                         />
                     </div>

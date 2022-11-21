@@ -86,8 +86,7 @@ const CustomEventCard = ({ name, headerImage, date, excerpt, address, price, slu
                         <GatsbyImage
                             image={getImage(headerImage)}
                             alt={name}
-                            imgClassName={['']}
-                            imageAdditionalProps={imgSize}
+                            imgClassName={imgSize}
                         />
                     </div>
                 </div>

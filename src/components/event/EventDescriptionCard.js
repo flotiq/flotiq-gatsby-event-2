@@ -42,7 +42,7 @@ const EventDescriptionCard = ({ name, headerImage, date, description, address, p
             </Card.Body>
             <div
                 className="basis-full lg:basis-1/2 bg-cover bg-center"
-                style={{ backgroundImage: `url('${headerImage}')` }}
+                style={{ backgroundImage: `url('${(headerImage.publicURL)}')` }}
             />
         </div>
         <div className="basis-full">

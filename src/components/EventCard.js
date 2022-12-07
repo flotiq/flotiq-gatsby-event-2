@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'flotiq-components-react';
 import { Link } from 'gatsby';
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const PastEventLabel = ({ date }) => (
     <div className="flex !basis-1/6 md:!basis-1/12 flex-col justify-center items-center

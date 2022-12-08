@@ -43,7 +43,9 @@ const NextEventCard = ({ name, headerImage, date, excerpt, address, price, slug 
                     <p>{price}</p>
                 </div>
             </Card.Body>
-            <div className="basis-3/12 bg-cover bg-center" style={{ backgroundImage: `url('${headerImage}')` }} />
+            <div
+                className="basis-3/12 bg-cover bg-center" style={{ backgroundImage: `url('${headerImage.publicURL}')` }}
+            />
         </Link>
     </Card>
 );

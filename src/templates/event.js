@@ -20,7 +20,7 @@ const EventTemplate = ({ data, pageContext }) => {
             <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-0">
                 <EventDescriptionCard
                     name={event.name}
-                    headerImage={event.image[0] && event.image[0].localFile.publicURL}
+                    headerImage={event.image[0] && event.image[0].localFile}
                     date={event.date}
                     description={event.description}
                     address={event.address}
@@ -60,7 +60,7 @@ export const pageQuery = graphql`
                 localFile {
                     publicURL
                     childImageSharp {
-                        gatsbyImageData(layout: FULL_WIDTH)
+                        gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
                     }
                 }
             }
@@ -78,7 +78,7 @@ export const pageQuery = graphql`
                 localFile {
                     publicURL
                     childImageSharp {
-                        gatsbyImageData(layout: FULL_WIDTH)
+                        gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE)
                     }
                 }
             }

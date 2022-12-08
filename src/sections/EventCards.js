@@ -11,7 +11,7 @@ const EventCards = ({ events, headerText }) => {
         }
         return false;
     };
-    let monthSplitEvents = { };
+    let monthSplitEvents = {};
     events.forEach((event) => {
         const month = new Date(event.node.date);
         const monthIndex = `${month.getFullYear()}-${month.getMonth() + 1}`;
@@ -46,7 +46,7 @@ const EventCards = ({ events, headerText }) => {
                             <EventCard
                                 featured={isFeatured(event)}
                                 name={event.node.name}
-                                headerImage={event.node.image[0] && event.node.image[0].localFile.publicURL}
+                                headerImage={event.node.image[0] && event.node.image[0].localFile}
                                 date={event.node.date}
                                 excerpt={event.node.excerpt}
                                 address={event.node.address}

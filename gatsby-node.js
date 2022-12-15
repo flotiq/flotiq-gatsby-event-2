@@ -5,39 +5,39 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const singleEvent = path.resolve('./src/templates/event.js');
     const result = await graphql(`
-        query GetEvents {
-            allEvent(sort: {order: ASC, fields: date}) {
-                edges {
-                    node {
-                        id
-                        name
-                        slug
-                        image {
-                            extension
-                            url
-                            width
-                            height
-                            localFile {
-                                publicURL
-                                childImageSharp {
-                                    gatsbyImageData(layout: FULL_WIDTH)
-                                }
-                            }
-                        }
-                        address
-                        date
-                        price
-                        description
-                        excerpt
-                        gallery {
-                            localFile {
-                              publicURL
-                            }
-                        }
-                    }
+    query GetEvents {
+        allEvent(sort: {date: ASC}) {
+          edges {
+            node {
+              id
+              name
+              slug
+              image {
+                extension
+                url
+                width
+                height
+                localFile {
+                  publicURL
+                  childImageSharp {
+                    gatsbyImageData(layout: FULL_WIDTH)
+                  }
                 }
+              }
+              address
+              date
+              price
+              description
+              excerpt
+              gallery {
+                localFile {
+                  publicURL
+                }
+              }
             }
+          }
         }
+      }
 `);
 
     if (result.errors) {

@@ -76,7 +76,7 @@ const CustomEventCard = ({
         EventLabel = FeaturedEventLabel;
     }
     return (
-        <Link to={`/${slug}`} className="w-full">
+        <Link to={`/${slug}`}>
             <Card
                 horizontal
                 bordered={false}

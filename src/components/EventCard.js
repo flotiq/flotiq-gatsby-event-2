@@ -52,7 +52,7 @@ const CustomEventCard = ({ name, headerImage, date, excerpt, address, price, slu
     if (new Date(date) < new Date()) { EventLabel = PastEventLabel; }
     if (featured) { EventLabel = FeaturedEventLabel; }
     return (
-        <Link to={`/${slug}`}>
+        <Link to={`/${slug}`} className="w-full">
             <Card
                 horizontal
                 bordered={false}

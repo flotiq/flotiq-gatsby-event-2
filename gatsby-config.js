@@ -13,7 +13,7 @@ module.exports = {
     siteMetadata: {
         title: 'Flotiq Gatsby event starter',
         description: 'Flotiq Gatsby event starter',
-        siteUrl: 'https://flotiqgatsbyevent2.gatsbyjs.io',
+        siteUrl: 'https://flotiq-gatsby-event-2.netlify.app',
     },
     plugins: [
         {

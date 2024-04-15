@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@fontsource/lato": "^5.0.20",
-    "@headlessui/react": "^1.7.18",
+    "@headlessui/react": "^1.7.19",
     "@heroicons/react": "1.0.6",
     "@popperjs/core": "^2.11.8",
     "@tailwindcss/forms": "^0.5.7",

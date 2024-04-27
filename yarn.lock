@@ -1317,10 +1317,10 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
-"@fontsource/lato@^5.0.20":
-  version "5.0.20"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.20.tgz#27721d42112da4da288447f8904e36c8ceef98ee"
-  integrity sha512-2ej7KDuTFoea6Q2hWjx3Png1+MdNcW4V6l7sw/vNauuxCv9xBIZCmpXnTz9eVdj/5Ui//jiWWiQk57mGwjCNwA==
+"@fontsource/lato@^5.0.21":
+  version "5.0.21"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.21.tgz#134041a543f5e54674a6b40138171ff8031912e1"
+  integrity sha512-UubLwvJO2bKuhWv6+ocx2Bou/pPIT6q7VpYaHIW7ZDaLPQY3uYAhveJg6P7Lvz5HYHyLba8JUc3yP7wvcqA8zQ==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.13.1":
   version "2.13.1"

@@ -9,8 +9,7 @@ const EventDescriptionCard = ({ name, headerImage, date, description, address, p
         rounded="none"
         additionalClasses={['w-full flex flex-wrap mb-10 my-10']}
     >
-        <div className="flex !basis-1/6 lg:!basis-1/12 flex-col
-            basis-1/12 font-light relative bg-light-gray"
+        <div className="flex !basis-1/6 lg:!basis-1/12 flex-col font-light relative bg-light-gray"
         >
             <p className="w-full px-1 md:px-3 py-7 text-xs md:text-base
             text-center text-white bg-primary"
@@ -45,11 +44,11 @@ const EventDescriptionCard = ({ name, headerImage, date, description, address, p
                 style={{ backgroundImage: `url('${(headerImage.publicURL)}')` }}
             />
         </div>
-        <div className="basis-full">
+        <div className="basis-full lg:hidden">
             <GatsbyImage
                 image={getImage(headerImage)}
                 alt={name}
-                imgClassName={['block lg:hidden !w-full']}
+                imgClassName={'block lg:hidden !w-full'}
             />
         </div>
     </Card>

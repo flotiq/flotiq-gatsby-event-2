@@ -7694,7 +7694,7 @@ gatsby-cli@^5.13.3:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^4.10.0, gatsby-core-utils@^4.13.1, gatsby-core-utils@^4.3.1:
+gatsby-core-utils@^4.13.1, gatsby-core-utils@^4.3.1:
   version "4.13.1"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.13.1.tgz#57955316486cc85ab150922f481484bc9287205e"
   integrity sha512-w7G6SsQr8T2q+AJ1MxvRNGocCt+wjc22MiRLj2Zi3Ijpjszbr818JxwI4+aPt8WOSHlKT5SYCHICnEvcYPm9gg==
@@ -7939,7 +7939,7 @@ gatsby-sharp@^1.13.0:
   dependencies:
     sharp "^0.32.6"
 
-gatsby-source-filesystem@^5.13.1:
+gatsby-source-filesystem@^5.13.1, gatsby-source-filesystem@^5.3.1:
   version "5.13.1"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-5.13.1.tgz#1aad8f969fbfd4efe6f7cfcd8542253f54fdbd8a"
   integrity sha512-nFWzOBpi84nDeVNeO7bpKL9mVYMl1tfjJmE5l868YATFShGzZnA6qMd200XCsf78PexZHAiV/P1MlsyKqjJduA==
@@ -7954,25 +7954,10 @@ gatsby-source-filesystem@^5.13.1:
     valid-url "^1.0.9"
     xstate "^4.38.0"
 
-gatsby-source-filesystem@^5.3.1:
-  version "5.10.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-5.10.0.tgz#9b009a42ea1c202c7aa3dbd59d9042c2a6512814"
-  integrity sha512-pTcqFvngUqap4NJfzG9VMmJ4T5TTf/WsMVTVORw18kprXZBchioLu0m5vVb9Tm7/MW7XPXvKJPZQkw+/otmVYw==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    chokidar "^3.5.3"
-    file-type "^16.5.4"
-    fs-extra "^11.1.1"
-    gatsby-core-utils "^4.10.0"
-    mime "^3.0.0"
-    pretty-bytes "^5.6.0"
-    valid-url "^1.0.9"
-    xstate "^4.37.2"
-
-gatsby-source-flotiq@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-flotiq/-/gatsby-source-flotiq-5.2.1.tgz#f29d61ef7e1d1c2814a30f23128aec967ff410bf"
-  integrity sha512-lOxlGBj1Ug4N3tq6Efic9Qb4Ezj5ltNS5FvunPpVSjBxsuHHJv89Mq9SguYxa+378liseiHeUlYd7YPwkZNKoQ==
+gatsby-source-flotiq@^5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-flotiq/-/gatsby-source-flotiq-5.2.3.tgz#ff4ab2ac68fc7d8ded909ba1f6f533652823fccd"
+  integrity sha512-EiLNWF9TeApgj3rvwe6UK2mlfGTDo2YQnDtI0tkepvpsQXac8bl+7QEcXZUXt49XZ5TXW8ma20dANHdy5LRZMg==
   dependencies:
     gatsby-core-utils "^4.3.1"
     gatsby-source-filesystem "^5.3.1"
@@ -13744,7 +13729,7 @@ xmlhttprequest-ssl@~2.0.0:
   resolved "https://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-2.0.0.tgz#91360c86b914e67f44dce769180027c0da618c67"
   integrity sha512-QKxVRxiRACQcVuQEYFsI1hhkrMlrXHPegbbd1yn9UHOmRxY+si12nQYzri3vbzt8VdTTRviqcKxcyllFas5z2A==
 
-xstate@^4.37.2, xstate@^4.38.0:
+xstate@^4.38.0:
   version "4.38.3"
   resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.38.3.tgz#4e15e7ad3aa0ca1eea2010548a5379966d8f1075"
   integrity sha512-SH7nAaaPQx57dx6qvfcIgqKRXIh4L0A1iYEqim4s1u7c9VoCgzZc+63FY90AKU4ZzOC2cfJzTnpO4zK7fCUzzw==

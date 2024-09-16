@@ -16,7 +16,7 @@
     "lint": "eslint --ext .js,.jsx ."
   },
   "dependencies": {
-    "@fontsource/lato": "^5.0.22",
+    "@fontsource/lato": "^5.1.0",
     "@headlessui/react": "^2.1.3",
     "@heroicons/react": "1.0.6",
     "@popperjs/core": "^2.11.8",

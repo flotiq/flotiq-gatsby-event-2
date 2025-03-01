@@ -2550,10 +2550,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.7.tgz#d0ece53ce99ab5a8e37ebdfe5e32452a2bfc073e"
   integrity sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==
 
-"@fontsource/lato@^5.1.1":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.1.1.tgz#9145fd12407684f3d765171e539e76f6e490eabb"
-  integrity sha512-sHnUKhfLcCxa2DTfXlpFntXJAFJ/s4kmmRFRf29Dp7dBcdFdlvWjCbXPZf1rhkzdE1vqTwBVlOGSX/kFgIOkhg==
+"@fontsource/lato@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.2.0.tgz#2187bb6e67bf2930fb8ec77853221a461029fef2"
+  integrity sha512-w3pKE2LfFUvA9DZ2qqrnq9zaz+if+sVMObEMmo3c4VVrxJcsxTywaH1uNZREwU9PbZ1bKt6s9p4Oi0Qp4jGVdQ==
 
 "@gatsbyjs/parcel-namer-relative-to-cwd@2.14.0":
   version "2.14.0"
